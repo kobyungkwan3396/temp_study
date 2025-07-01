@@ -1,0 +1,53 @@
+var num=1;
+
+if(num % 2 ==0)
+    console.log('짝수입니다.');
+else
+    console.log('홀수입니다.');
+num % 2 == 0 && console.log('짝수입니다.');
+num % 2 == 0 || console.log('홀수입니다.'); 
+
+var person = {
+    firstName: 'GilDong',
+    lastName: 'Hong',
+    age: 20
+};
+
+
+for (var key in person) {
+     console.log(`key : ${key}`);
+    console.log(`${key} : ${person[key]}`); 
+}
+
+function addNumbers(a, b) {
+    return a + b;
+}
+console.log(addNumbers(3, 5));  8
+
+//const greet = () ==> "Hello!";
+//const getInfo = (name, age) ==> `name: ${name}, age: ${age}`;
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+
+  this.sayHello = function() {
+    console.log(`안녕하세요, 제 이름은 ${this.name} 이고 나이는 ${this.age}세입니다.`);
+  };
+}
+
+const person2 = new Person("홍길동", 20);
+person2.sayHello();
+
+const car = {
+  brand: "Hyundai"
+};
+const fireCar = Object.create(car);
+fireCar.color = "red"
+console.log(fireCar.brand);
+console.log(fireCar.color);
+console.log(fireCar.hasOwnProperty("brand"));
+console.log(fireCar.hasOwnProperty("color"));
+
+총 7문제를 생각하고 연구해서 풀어보았습니다. 어려웠지만 팀스터디구성원과 리뷰를 통해 한문제씩 짚어볼 수있엇고요. 뭐가 틀렸고 왜 결과값이
+안나오는지에대해 파악할 수있어서 좋은 시간이었던것 같습니다.
