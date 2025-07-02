@@ -1,0 +1,66 @@
+// 1번 문제
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<ul id="hobby">
+    <li>야구</li>
+</ul>
+
+<script>
+    const $hobby = document.getElementById('hobby');
+
+        const $container = document.createElement('div');
+
+        ['축구', '농구', '수영'].forEach(text => {
+            const $li = document.createElement('li');
+            $li.textContent = text;
+
+            // div에 li를 추가
+            $container.append($li);
+        });
+        
+        // 컨테이너 요소 div를 사용하면 DOM은 1번만 변경된다.
+        $hobby.appendChild($container);
+    </script>
+
+</body>
+</html>
+
+//2번 문제
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="nickname">닉네임</label>
+    <input type="text" id="nickname" value="Student">
+
+    <script>
+        const $nickname = document.getElementById('nickname');
+
+        // name 어트리뷰트를 가지고 있는지 확인
+        console.log($nickname.hasAttribute('name'));
+
+        // value 어트리뷰트를 가지고 있는지 확인
+        if($nickname.hasAttribute('value')) {
+            // value 어트리뷰트가 있으면 삭제
+            $nickname.removeAttribute('value');
+        }
+
+        console.log($nickname.hasAttribute('value'));
+    </script>
+     
+</body>
+</html>
+
+팀 구성원분들과 서로 2문제씩 오늘 배운 내용에 대해 문제를 내고 서로 낸 문제에 대해 풀어봄으로써 공부가 되어서 유익한 시간이었습니다.
