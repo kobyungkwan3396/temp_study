@@ -1,0 +1,35 @@
+class Animal {
+
+    constructor(name,weight) {
+        this.name = name;
+        this.weight= weight;
+    }
+
+    eat(foodWeight) {
+        this.weight += foodWeight;
+        console.log(`${this.name}(은)는 ${foodWeight}kg의 식사를 하고 ${this.weight}kg이 되었습니다.`);
+    }
+
+    move(lostWeight) {
+        if(this.weight > lostWeight)
+            this.weight -= lostWeight;
+        console.log(`${this.name}(은)는 움직임으로 인해 ${lostWeight}kg 감량되어 ${this.weight}kg이 되었습니다.`);
+    }
+}
+
+class Deer extends Animal {
+
+    constructor(name, weight, legLength) {
+        super(name,weight);
+        this.legLength = legLength;
+    }
+
+    hide(place) {
+        console.log(`${this.name}(은)는 ${place}에 숨습니다.`);
+    }
+}
+
+let deer = new Deer('사슴', 40, 4);
+deer.hide('동굴 안');
+
+오늘 수업 내용을 복습하였는데 하나하나 입력해보고 결과값을 도출해봄으로써 수업내용에 대해 이해할 수있었습니다
